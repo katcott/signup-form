@@ -1,82 +1,51 @@
-
-*{
-  font-family: sans-serif;
-}
-
-@font-face {
-  font-family: "norse";
-  src:
-    url("fonts/norse-bold-webfont.woff") format("woff"),
-    url("fonts/norse-bold-webfont.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-body{
-  display: flex;
-  padding: 0;
-  margin: 0;
-}
-
-input, button{
-  border-radius: 4px;
-  border: 1px solid silver;
-  height: 20px;
-}
-
-label, input{
-  display: block;
-  width: 200px;
-}
-
-h2{
-  max-width: 50%;
-}
-
-h1{
-  font:
-  5em "norse",
-  monospace;
-  align-self: end;
-  color: #ffffff;
-}
-
-form{
-}
-
-.rightContent{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 5%;
-}
-
-.sidebar{
-  background-image:url(./images/halie-west-25xggax4bSA-unsplash.jpg
-  );
-  background-size:cover;
-  width: 30%;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-.sidebar > div{
-  min-height: 100px;
-  background-color:rgba(36, 36, 36, 0.65)
-}
-
-.sidebar > div > h1{
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.formItems{
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-}
-
-.formItems > div{
-  margin: 20px 20px 20px 0px;
-}
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Sign-Up Form</title>
+  </head>
+    <body>
+        <div class="sidebar">
+            <div>
+                <h1>ODIN</h1>
+            </div>
+        </div>
+        <div class="rightContent">
+            <h2>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. <br>Sign up <em>now</em> to get started</h2>
+            <h2>You <em>know</em> you want to.</h2>
+            <form>
+                <h2>Let's do this!</h2>
+                <div class="formItems">
+                    <div>
+                        <label for="first">First Name</label>
+                        <input type="text" name="first_name" id="first" required>
+                    </div>
+                    <div>
+                        <label for="last">Last Name</label>
+                        <input type="text" name="last_name" id="last" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="user_email" required>
+                    </div>
+                    <div>
+                        <label for="number">Phone Number</label>
+                        <input type="tel" name="phone_number" id="number" required>
+                    </div>
+                    <div>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div>
+                        <label for="confPassword">Confirm Password</label>
+                        <input type="password" name="password" id="confPassword" required>
+                    </div>
+                </div>
+                <button type="submit">Create Account</button>
+            </form>
+            <p>Already have an account? <a href="" target="_blank">Log in</a></p>
+        </div>
+    </body>
+</html>
