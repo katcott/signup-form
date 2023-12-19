@@ -16,17 +16,27 @@ body{
   display: flex;
   padding: 0;
   margin: 0;
+  background-color: rgb(245, 245, 245);
 }
 
-input, button{
+input{
   border-radius: 4px;
-  border: 1px solid silver;
-  height: 20px;
+  border: 1px solid rgb(207, 207, 207);
+  height: 25px;
+}
+
+input:focus{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 label, input{
   display: block;
-  width: 200px;
+  width: 250px;
+}
+
+label{
+  color: rgb(65, 65, 65);
+  font-weight: 300;
 }
 
 h2{
@@ -35,19 +45,54 @@ h2{
 
 h1{
   font:
-  5em "norse",
+  8.5vh "norse",
   monospace;
-  align-self: end;
   color: #ffffff;
 }
 
-form{
+p, a{
+  font-weight: 500;
+}
+
+a{
+  text-decoration: none;
+  color:darkolivegreen;
+  transition: ease-in 500ms;
+}
+
+a:hover{
+  color:black;
+  transition: ease-in 500ms;
+}
+
+form > div{
+  background-color: #ffffff;
+  padding: 10px 0px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form button{
+  padding: 15px 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: darkolivegreen;
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+  margin: 50px 0 10px 5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .rightContent{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.rightContent > h2,
+.rightContent > div,
+.rightContent form > div,
+.rightContent > p{
   padding-left: 5%;
 }
 
@@ -55,28 +100,48 @@ form{
   background-image:url(./images/halie-west-25xggax4bSA-unsplash.jpg
   );
   background-size:cover;
-  width: 30%;
+  width: 40%;
   height: 100vh;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar > div{
   min-height: 100px;
-  background-color:rgba(36, 36, 36, 0.65)
+  background-color:rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  margin-top: 45%;
+  width: 100%;
 }
 
-.sidebar > div > h1{
+.sidebar div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sidebar > div > div > h1{
   color: #ffffff;
-  font-weight: bold;
+  margin: 0 20% 0 0;
+  padding: 0;
+}
+
+.sidebar img{
+  height: 12.5vh;
+  width: auto;
+  margin: 10px 0 10px 20%;
 }
 
 .formItems{
   display: flex;
-  flex-wrap: wrap;
-  width: 50%;
+  flex-direction: column;
 }
 
 .formItems > div{
-  margin: 20px 20px 20px 0px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 15%;
+  padding: 15px 0;
 }
