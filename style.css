@@ -25,8 +25,21 @@ input{
   height: 25px;
 }
 
+input::placeholder{
+  color: rgb(170, 170, 170);
+}
+
+input:not(:focus):not(:placeholder-shown):valid{
+  border: 1px solid rgb(207, 207, 207);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid{
+  border: 1.5px solid rgb(168, 2, 2);
+}
+
 input:focus{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  outline: 0;
 }
 
 label, input{
@@ -144,4 +157,12 @@ form button{
   justify-content: flex-start;
   gap: 15%;
   padding: 15px 0;
+}
+
+.rightContent > :nth-child(2){
+  padding-bottom:75px;
+}
+
+#passwordMessage{
+  padding-top: 10px
 }
